@@ -52,8 +52,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: service-transaction-mitra
-    volumes:
-      - .:/var/www
+    # volumes:
+    #   - .:/var/www  # Commented untuk testing - gunakan file dari image
     environment:
       APP_ENV: local
       APP_KEY: base64:TTTn27QFRaokwDBlpDgFNyREZIn1BDkSR3IEroT4u7k=
