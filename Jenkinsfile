@@ -35,9 +35,6 @@ pipeline {
         }
 
         stage('Tag Image') {
-            when {
-                branch 'main'
-            }
             steps {
                 script {
                     echo 'Tagging Docker image...'
@@ -49,9 +46,6 @@ pipeline {
         }
 
         stage('Deploy to Local') {
-            when {
-                branch 'main'
-            }
             steps {
                 script {
                     echo 'Deploying application locally...'
@@ -66,9 +60,6 @@ pipeline {
         }
 
         stage('Health Check') {
-            when {
-                branch 'main'
-            }
             steps {
                 script {
                     echo 'Checking application health...'
