@@ -77,18 +77,6 @@ pipeline {
                 }
             }
         }
-        stage('Health Check') {
-            when {
-                branch 'main'
-            }
-            steps {
-                script {
-                    echo 'Checking application health...'
-                    sleep(time: 10, unit: 'SECONDS')
-                    bat 'docker-compose logs --tail=50 service-transaction-mitra'
-                }
-            }
-        }
     }
 
     post {
